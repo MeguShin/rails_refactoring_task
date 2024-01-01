@@ -1,36 +1,30 @@
 <p id="notice"><%= notice %></p>
-    <h1>
-      <%= @club.name %>
-    </h1>
+  <h1>
+    <%= @club_decorator.display_name %>
+  </h1>
 
 <section class="wrapper">
   <%= image_tag @club.logo, size: "250x250" %>
 
   <div>
     <p>
-      <strong>Homebase:</strong>
-      <%= @club.homebase %>
+     <strong><%= @club_decorator.display_homebase %></strong>
     </p>
 
     <p>
-      <strong>Established on:</strong>
-      <%= @club.established_on %>
+     <strong><%= @club_decorator.display_established_on %></strong>
     </p>
 
     <p>
-      <strong>Manager:</strong>
-      <%= @club.manager %>
+      <strong><%= @club_decorator.display_manager %></strong>
     </p>
 
     <p>
-      <strong>Results:</strong>
-      <%= last_year %>: <%= @club.total_result_on(last_year) %>,
-      <%= this_year %>: <%= @club.total_result_on(this_year) %>
+      <strong><%= @club_decorator.display_results %></strong>
     </p>
 
     <p>
-      <strong>Players Avarage age</strong>
-      <%= @players_average_age %>
+      <strong><%= @club_decorator.display_players_average_age %></strong>
     </p>
 
   </div>
